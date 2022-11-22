@@ -1,4 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
+import theme from '../src/theme'
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -9,13 +10,13 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Roboto', sans-serif;
-    background-color: ${(props) => props.theme.secondBackgroundColor};
+    background-color: ${(props) => props.theme.colors.white};
   }
 `
 
 function App({ Component, pageProps }) {
   return (
-    <ThemeProvider theme={{}}>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <Component {...pageProps} />
     </ThemeProvider>

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 const StyledDiv = styled.div`
-  background-color: red;
+  background-color: ${(props) => props.theme.colors.primary};
 `
 
 export default function homePage() {
