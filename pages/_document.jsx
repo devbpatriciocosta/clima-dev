@@ -7,19 +7,18 @@ export default class NewDocument extends Document {
     const originalRenderPage = ctx.renderPage
 
     try {
-      ctx.renderPage = () => 
-      originalRenderPage({
-        enhanceApp: (App) => (props) =>
-          sheet.collectStyles(<App {...props} />),
-      })
-      
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />)
+        })
+
       const initialProps = await Document.getInitialProps(ctx)
-      return{
-        ...initialProps, 
-        styles: [initialProps.styles, sheet.getStyleElement()],
+      return {
+        ...initialProps,
+        styles: [initialProps.styles, sheet.getStyleElement()]
       }
-  } finally {
-    sheet.seal()
+    } finally {
+      sheet.seal()
     }
-  } 
+  }
 }
