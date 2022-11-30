@@ -16,6 +16,7 @@ const VerticalText = styled.h1`
   line-height: 70px;
   margin-left: 160px;
   margin-top: -80px;
+  margin-bottom: 50px;
 `
 
 const PrimaryColor = styled.span`
