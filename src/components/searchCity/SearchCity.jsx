@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react'
+import { useRouter } from 'next/router'
 
 import InputWithSuggestions from '../form/inputWithSuggestions/InputWithSuggestions'
 
 export default function SearchCity() {
   const [searchText, setSearchText] = useState('')
   const [suggestions, setSuggestions] = useState([])
+
+  const router = useRouter()
 
   const fetchCitiesList = async () => {
     const CITIES_LIMIT = 5
@@ -18,7 +21,7 @@ export default function SearchCity() {
   const handleList = (list) => {
     const formattedList = list.map((obj) => ({
       text: `${obj.name}, ${obj.state}, ${obj.country}`,
-      onClick: () => console.log(`LAT: ${obj.lat} LON: ${obj.lon}`)
+      onClick: () => router.push(`/info/${obj.lat}/${obj.lon}`)
     }))
     setSuggestions(formattedList)
   }
