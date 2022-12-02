@@ -1,13 +1,20 @@
 import styled from 'styled-components'
 
 import Logo from '../logo/Logo'
+import Container from '../layout/container/Container'
 
-const styledNavBar = styled.div``
+const StyledNavBar = styled.div`
+  height: 105px;
+  display: flex;
+  align-items: center;
+`
 
 export default function Navbar() {
   return (
-    <styledNavBar>
-      <Logo />
-    </styledNavBar>
+    <StyledNavBar>
+      <Container>
+        <Logo />
+      </Container>
+    </StyledNavBar>
   )
 }
