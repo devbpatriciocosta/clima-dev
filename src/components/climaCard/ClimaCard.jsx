@@ -9,7 +9,7 @@ const StyledClimaCard = styled.div`
 `
 
 const Title = styled.h6`
-  font-size: 700;
+  font-size: 20px;
   font-weight: 20px;
   text-align: center;
   margin: 0;
