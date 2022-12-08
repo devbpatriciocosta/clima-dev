@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import BackgroundImageWithSpace from '../src/components/layout/backgroundImageWithChildren/BackgroundImageWithChildren'
 import Logo from '../src/components/logo/Logo'
 import SearchCity from '../src/components/searchCity/SearchCity'
+import Footer from '../src/components/footer/Footer'
 
 const StyledDiv = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   min-width: 500px;
+  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,13 +34,16 @@ const InputContainer = styled.div`
 
 export default function homePage() {
   return (
-    <BackgroundImageWithSpace>
-      <StyledDiv>
-        <Logo showImage type="vertical" />
-        <InputContainer>
-          <StyledInput />
-        </InputContainer>
-      </StyledDiv>
-    </BackgroundImageWithSpace>
+    <>
+      <BackgroundImageWithSpace>
+        <StyledDiv>
+          <Logo showImage type="vertical" />
+          <InputContainer>
+            <StyledInput />
+          </InputContainer>
+        </StyledDiv>
+      </BackgroundImageWithSpace>
+      <Footer />
+    </>
   )
 }

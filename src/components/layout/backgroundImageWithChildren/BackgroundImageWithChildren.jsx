@@ -10,7 +10,7 @@ const BackgroundImage = styled.div`
   background-position: right;
   background-size: cover;
   width: 100%;
-  min-height: 100vh;
+  min-height: 95vh;
 `
 
 export default function BackgroundImageWithSpace({ children, image }) {

@@ -3,7 +3,7 @@ import styled from 'styled-components'
 const StyledFooter = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   text-align: center;
-  padding: 30px 0;
+  padding: 10px 0;
   font-weight: 400;
   font-size: 20px;
 `
