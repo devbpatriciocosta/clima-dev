@@ -11,7 +11,7 @@ import Footer from '../../../src/components/footer/Footer'
 
 const Body = styled.div`
   background-color: ${(props) => props.theme.colors.grey};
-  min-height: calc(100vh - 200px);
+  min-height: calc(100vh - 150px);
 `
 
 const Content = styled.div`
