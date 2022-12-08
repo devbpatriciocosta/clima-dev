@@ -3,12 +3,10 @@ import styled from 'styled-components'
 import BackgroundImageWithSpace from '../src/components/layout/backgroundImageWithChildren/BackgroundImageWithChildren'
 import Logo from '../src/components/logo/Logo'
 import SearchCity from '../src/components/searchCity/SearchCity'
-import Footer from '../src/components/footer/Footer'
 
 const StyledDiv = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   min-width: 500px;
-  height: 95vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +41,6 @@ export default function homePage() {
           </InputContainer>
         </StyledDiv>
       </BackgroundImageWithSpace>
-      <Footer />
     </>
   )
 }
