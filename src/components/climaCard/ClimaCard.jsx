@@ -3,9 +3,17 @@ import styled from 'styled-components'
 const StyledClimaCard = styled.div`
   background-color: ${(props) => props.theme.colors.white};
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border: 2px solid rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   width: 300px;
   padding: 15px;
+
+  transition: 0.4s ease-in-out;
+
+  :hover {
+    transform: scale(1.1);
+    border: 2px solid #ec6e4c;
+  }
 `
 
 const Title = styled.h6`
