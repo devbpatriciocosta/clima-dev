@@ -13,7 +13,6 @@ const StyledNavBar = styled.div`
 const StyledLogo = styled.div`
   cursor: pointer;
   width: 205px;
-  background-color: red;
 `
 
 export default function Navbar() {
